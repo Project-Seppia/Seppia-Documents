@@ -1,0 +1,3 @@
+# api information
+
+## fetchLocationByLocation
