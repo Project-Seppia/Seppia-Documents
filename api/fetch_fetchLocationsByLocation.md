@@ -1,49 +1,49 @@
-# 请求接口
+# API DESCRIPTION
 
 ```
 /fetch/fetchLocationsByLocation
 ```
 
-## 请求类型
+## TYPE OF THIS CONNECT
 
 ```
 HTTP/GET
 ```
 
-## 参数说明
+## DESCRIPTION OF PARAMETER
 
-### 请求参数说明
+### PARAMETER OF REQUEST
 
-参数      | 类型     | 值            | 说明
-------- | ------ | ------------ | ---
-lat     | double | 37.4561922   | 维度
-lng     | double | -122.1548878 | 经度
-radius  | int    | 5000         | 半径
+params  | type   | value        | description
+------- | ------ | ------------ | --------------------------
+lat     | double | 37.4561922   | latitude
+lng     | double | -122.1548878 | longitude
+radius  | int    | 5000         | radius of this location ^1
 keyword | string | "sports"     | 关键词
 
-### 相应参数说明
+### TABLE OF RESPONSE
 
-参数      | 类型            | 值                               | 说明
-------- | ------------- | ------------------------------- | ----
-result  | result.item[] | []                              | 请求结果
-tag     | string        | /fetch/fetchLocationsByLocation | 请求标志
-status  | boolean       | true                            | 请求状态
-err_msg |               | None                            | 错误代码
+params  | type          | value                           | description
+------- | ------------- | ------------------------------- | --------------------------------------
+result  | result.item[] | []                              | result of this this time(http request)
+tag     | string        | /fetch/fetchLocationsByLocation | tag of this time(http request)
+status  | boolean       | true                            | status of this time(http request)
+err_msg |               | None                            | error message(http request)
 
-#### result.item 类型说明
+#### DESCRIBE ITEM OF RESPONSE
 
-参数                     | 类型           | 值                                           | 说明
----------------------- | ------------ | ------------------------------------------- | -----
-address                | string       | 3151 Edison Way, Redwood City               | 地址信息
-phone                  | string       | 123456789                                   | 手机号
-name                   | string       | SportsHouse                                 | 店名
-geometry               | geometryInfo | {lat:37.476493,lng:-122.2031432}            | 经纬度信息
-photo                  | phoneInfo    | {height:1530, width:2048, photoReference:-} | 图片信息
-rating                 | double       | 4.300000190734863                           | 比率
+params                 | type         | value                                       | description
+---------------------- | ------------ | ------------------------------------------- | --------------------------
+address                | string       | 3151 Edison Way, Redwood City               | address of this position
+phone                  | string       | 123456789                                   | phone or telephone number
+name                   | string       | SportsHouse                                 | name of this sport house
+geometry               | geometryInfo | {lat:37.476493,lng:-122.2031432}            | information of location
+photo                  | phoneInfo    | {height:1530, width:2048, photoReference:-} | information of photo
+rating                 | double       | 4.300000190734863                           | rating of this sport house
 openingTimeInSevenDays | string[]     |                                             |
 
 ```
-result.item 示例数据
+[SAMPLES DATA] result.item
 {
   "address": "3151 Edison Way, Redwood City",
   "phone": "123456789",
@@ -62,34 +62,34 @@ result.item 示例数据
 }
 ```
 
-##### geometryInfo 类型说明
+##### PARAMETER OF geometryInfo
 
-参数  | 类型     | 值            | 说明
---- | ------ | ------------ | --
-lat | double | 37.476493    | 纬度
-lng | double | -122.2031432 | 经度
+params | type   | value        | description
+------ | ------ | ------------ | -----------
+lat    | double | 37.476493    | latitude
+lng    | double | -122.2031432 | longitude
 
-##### phoneInfo 类型说明
+##### DESCRIPTION OF phoneInfo
 
-参数             | 类型  | 值                             | 说明
--------------- | --- | ----------------------------- | ----
-height         | int | 1530                          | 图片高度
-width          | int | 2048                          | 图片宽度
-photoReference | URL | <http://xxx.com/fdaffdaf.jpg> | 图片连接
+params         | type | value                         | description
+-------------- | ---- | ----------------------------- | ---------------
+height         | int  | 1530                          | height of photo
+width          | int  | 2048                          | width of photo
+photoReference | URL  | <http://xxx.com/fdaffdaf.jpg> | url of photo
 
 ```
 CoQBcwAAANjjBvLAv_QK37UvN1jwtFpC6qBSpHKBd1wgj83EqIsIxMBJw--TRoINFqr0fCiVS17DqO9cZvu632_Q5Mia6E5IwFE8hkRn8GGUXWfOOvm65WS_uc45jl2oWWvEMKKUaLSxsPBHlAekNQ9CqW1s99prtjkQLLK5ce3rqOc7gReuEhDvXqi5qbgrrOX1bjqRGclPGhQ9eoCVcGBpG_C4XaJNvyktn2aRuw
 ```
 
-# samples
+# SAMPLES
 
-## request
+## REQUEST
 
 ```
 /fetch/fetchLocationsByLocation?lat=37.4561922&lng=-122.1548878&radius=5000&keyword=%22sports%22
 ```
 
-## response
+## RESPONSE
 
 ```
 {
