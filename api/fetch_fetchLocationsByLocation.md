@@ -1,7 +1,8 @@
 # API DESCRIPTION
 
 ```
-/fetch/fetchLocationsByLocation
+HOST: seppiajava-1.fyxfn8ksis.us-east-1.elasticbeanstalk.com
+API: /fetch/fetchLocationsByLocation
 ```
 
 ## TYPE OF THIS CONNECT
@@ -28,7 +29,7 @@ params  | type          | value                           | description
 result  | result.item[] | []                              | result of this this time(http request)
 tag     | string        | /fetch/fetchLocationsByLocation | tag of this time(http request)
 status  | boolean       | true                            | status of this time(http request)
-err_msg |               | None                            | error message(http request)
+err_msg | string        | None                            | error message(http request)
 
 #### DESCRIBE ITEM OF RESPONSE
 
