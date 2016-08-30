@@ -8,7 +8,7 @@ all of api use JSON(`Content-Type: application/json`)
 HOST: seppiajava-1.fyxfn8ksis.us-east-1.elasticbeanstalk.com
 ```
 
-**ATTENTION**[ ^1]
+**ATTENTION**
 
 > when Http Code is 100, Response format is: `{"code":100,"message":"Sucessed.","tag":"/fetch/fetchLocationsByLocation","data":{}}`
 
@@ -21,7 +21,8 @@ HOST: seppiajava-1.fyxfn8ksis.us-east-1.elasticbeanstalk.com
 `GET`
 
 **Request**<br>
-`{ "lat":37.4561922, "lng":-122.1548878, "radius":5000, "keyword":"sports" }`[1]
+
+`{ "lat":37.4561922, "lng":-122.1548878, "radius":5000, "keyword":"sports" }`
 
 **Response**
 
@@ -65,7 +66,7 @@ HOST: seppiajava-1.fyxfn8ksis.us-east-1.elasticbeanstalk.com
 > radius  | int    | 5000         | radius of this location
 > keyword | string | "sports"     | Keyword
 
-[ ^2]: TABLE OF RESPONSE
+[ ^2]: DESCRIPTION OF RESPONSE
 
 > params  | type    | value                           | description
 > ------- | ------- | ------------------------------- | --------------------------------------
@@ -75,7 +76,7 @@ HOST: seppiajava-1.fyxfn8ksis.us-east-1.elasticbeanstalk.com
 > code    | int     | from a to b                     | action return code
 > err_msg | string  | None                            | error message(http request)
 
-[ ^3]: _Locations_ OF RESPONSE
+[ ^3]: DESCRIPTION OF _Locations_
 
 > params                 | type      | value                                       | description
 > ---------------------- | --------- | ------------------------------------------- | --------------------------
@@ -87,7 +88,7 @@ HOST: seppiajava-1.fyxfn8ksis.us-east-1.elasticbeanstalk.com
 > rating                 | double    | 4.300000190734863                           | rating of this sport house
 > openingTimeInSevenDays | string[]  |                                             |
 
-[ ^4]: PARAMETER OF _Geometry_
+[ ^4]: DESCRIPTION OF _Geometry_
 
 > params | type   | value        | description
 > ------ | ------ | ------------ | -----------
